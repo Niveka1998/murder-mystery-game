@@ -2,11 +2,13 @@ public class Item {
     private String name;
     private String description;
     private boolean isRedHerring;
+    private String location;
 
-    public Item(String name, String description, boolean isRedHerring) {
+    public Item(String name, String description, boolean isRedHerring, String location) {
         this.name = name;
         this.description = description;
         this.isRedHerring = isRedHerring;
+        this.location=location;
     }
 
     public String getName() {
@@ -31,5 +33,8 @@ public class Item {
 
     public void setRedHerring(boolean redHerring) {
         isRedHerring = redHerring;
+    }
+    public String getLocation(){
+        return location;
     }
 }

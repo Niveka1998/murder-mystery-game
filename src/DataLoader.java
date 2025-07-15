@@ -25,16 +25,17 @@ public class DataLoader {
 
     public static List<Item> loadItems(){
         List<Item> items = new ArrayList<>();
-        items.add(new Item("Torn Fabric", "A piece of red fabric caught on the doorknob.", false));
-        items.add(new Item("Empty Pill Bottle", "Label scratched off. Found near the victim's bed.", false));
-        items.add(new Item("Leather Glove", "Only one glove found in the hallway.", false));
-        items.add(new Item("Cigarette Butt", "Freshly used, lipstick on the filter.", false));
-        items.add(new Item("Footprint Cast", "A muddy boot print outside the window.", false));
-        items.add(new Item("Old Movie Ticket", "From a film that ended hours before the murder.", true)); // red herring
-        items.add(new Item("Pet Collar", "Belongs to the neighbor's dog. Irrelevant?", true)); // red herring
-        items.add(new Item("Smashed Phone", "Completely destroyed. Might be staged.", false));
-        items.add(new Item("Handwritten Note", "Says 'Meet me at midnight'. No signature.", false));
-        items.add(new Item("Wine Glass", "Lipstick mark doesn't match victim’s.", true)); // red herring
+        items.add(new Item("Torn Fabric", "A piece of red fabric caught on the doorknob.", false, "Dining Room"));
+        items.add(new Item("Empty Pill Bottle", "Label scratched off. Found near the victim's bed.", false, "Bedroom"));
+        items.add(new Item("Leather Glove", "Only one glove found in the hallway.", false, "Hallway"));
+        items.add(new Item("Cigarette Butt", "Freshly used, lipstick on the filter.", false, "Front Porch"));
+        items.add(new Item("Footprint Cast", "A muddy boot print outside the window.", false, "Backyard"));
+        items.add(new Item("Old Movie Ticket", "From a film that ended hours before the murder.", true, "Study"));
+        items.add(new Item("Pet Collar", "Belongs to the neighbor's dog. Irrelevant?", true, "Garden"));
+        items.add(new Item("Smashed Phone", "Completely destroyed. Might be staged.", false, "Workshop"));
+        items.add(new Item("Handwritten Note", "Says 'Meet me at midnight'. No signature.", false, "Study"));
+        items.add(new Item("Wine Glass", "Lipstick mark doesn't match victim’s.", true, "Kitchen"));
+
 
         return items;
     }
@@ -43,7 +44,7 @@ public class DataLoader {
         List<Location> locations= new ArrayList<>();
         locations.add(new Location("Basement", "Damp and filled with old furniture."));
         locations.add(new Location("Attic", "Dusty boxes and cobwebs everywhere."));
-        locations.add(new Location("Master Bedroom", "Bed is untouched, but window is open."));
+        locations.add(new Location("Bedroom", "Blanket twisted. Alarm clock smashed."));
         locations.add(new Location("Guest Room", "Pillow has blood stains. Sheets crumpled."));
         locations.add(new Location("Bathroom", "Mirror cracked. Water still running."));
         locations.add(new Location("Dining Room", "Table half set, wine bottle spilled."));
@@ -56,6 +57,7 @@ public class DataLoader {
         locations.add(new Location("Front Porch", "Newspaper from yesterday. Mud tracked in."));
         locations.add(new Location("Hallway", "One wall painting is slightly tilted."));
         locations.add(new Location("Workshop", "Tools scattered. Blood on vice grip."));
+        locations.add(new Location("Kitchen", "The stove is warm. A knife is missing from the rack."));
 
         return locations;
     }
